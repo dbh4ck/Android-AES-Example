@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transcriptMode="normal"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_nav__aes__android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.blogspot.dbh4ck.aes_encrypt_decrypt_android.Nav_AES_Android"
+    tools:showIn="@layout/app_bar_nav__aes__android"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AES Encrypt / Decrypt:"
+        android:textSize="22sp"
+        tools:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold|italic" />
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView android:id="@+id/sub1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- Encrypt / Decrypt String"
+        android:textSize="16sp"
+        tools:textStyle="normal|italic"
+        android:textColor="@android:color/holo_orange_dark" />
+
+    <TextView android:id="@+id/sub2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- Write Encrypted / Decrypted String"
+        android:textSize="16sp"
+        tools:textStyle="normal|italic"
+        android:textColor="@android:color/holo_orange_dark" />
+
+
+    <Space android:layout_height="20dp"
+        android:layout_width="match_parent"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txtInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Plain Text Here!"
+            android:inputType="text"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/colorPrimaryDark" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button android:textColor="#0b42f6"
+        android:id="@+id/btnEncrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Encrypt"
+        android:layout_marginBottom="18dp"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.Button.Small" />
+
+
+    <TextView android:textColor="#fc4108"
+        android:id="@+id/title2"
+        android:text="Encrypted Text:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:textSize="16sp"
+        android:textStyle="normal|bold" />
+
+    <TextView android:textColor="@color/colorPrimary"
+        android:id="@+id/txtOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="14dp"
+        android:layout_weight="0.10" />
+
+    <Button android:textColor="#0b42f6"
+        android:id="@+id/btnDecrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Decrypt"
+        android:layout_marginBottom="18dp"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.Button.Small" />
+
+    <TextView android:textColor="#fc4108"
+        android:id="@+id/title3"
+        android:text="Decrypted Text:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:textSize="16sp"
+        android:textStyle="normal|bold" />
+
+    <TextView android:textColor="@color/colorPrimary"
+        android:id="@+id/txtOriginal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
+
+    <Space android:layout_height="20dp"
+        android:layout_width="match_parent"/>
+
+    <TextView android:textColor="@android:color/holo_green_dark"
+        android:id="@+id/txtInfo1"
+        android:text="* In order to write the Encrypted file to sdCard, please enter file name below."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
+
+    <TextView android:textColor="@android:color/holo_green_dark"
+        android:id="@+id/txtInfo2"
+        android:text="Note: Files will be saved to /sdcard/AES-Android-Example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09"
+        android:textStyle="normal|italic" />
+
+    <EditText
+        android:id="@+id/txtFileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter File Name"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp" />
+
+    <Space android:layout_height="10dp"
+        android:layout_width="match_parent"/>
+
+    <Button android:textColor="#0b42f6"
+        android:id="@+id/btnSaveEncryptFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Encrypt and Write File to sdcard"
+        android:layout_marginBottom="44dp"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.Button.Small" />
+
+    </LinearLayout>
+</ScrollView>
